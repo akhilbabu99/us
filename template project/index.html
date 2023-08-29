@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+<title>My Profile</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="style.css">
+<link rel="webpage icon" href="./avatar.png">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+.w3-third img:hover{opacity: 1}
+</style>
+</head>
+<body class="w3-light-grey w3-content" style="max-width:1600px;">
+
+<!-- Sidebar/menu -->
+<div>
+<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold " id="mySidebar"><br>
+  <h3 class="w3-padding-64 w3-center"><b>AkhilBabu</b></h3>
+  
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">PORTFOLIO</a> 
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a> 
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+</div>
+
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">AKHIL BABU</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Push down content on small screens --> 
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Photo grid -->
+  <div class="w3-row">
+    <div class="w3-third">
+      <img src="./Screenshot_20230829-113203~2 (1).png" style="width:100% ;" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+      <img src="./Screenshot_20230829-113252~2.png" style="width:100%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+      <img src="./Screenshot_20230829-113338~2.png" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
+    </div>
+
+    <div class="w3-third">
+      <img src="./Screenshot_20230829-113356~2.png" style="width:100% ;" onclick="onClick(this)" alt="Quiet day at the beach. Cold, but beautiful">
+      <img src="./Screenshot_20230829-113324~2.png" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert">
+      <img src="./Screenshot_20230829-113329~2.png " style="width:100% " onclick="onClick(this)" alt="Nature again.. At its finest!">
+      
+    </div>
+    
+    <div class="w3-third">
+      <img src="https://mail.google.com/mail/u/0?ui=2&ik=5bb986801d&attid=0.1&permmsgid=msg-a:r-8666780673046534799&th=18a40c1eb6a039a3&view=att&disp=safe&realattid=18a40c1d9656ad0a5121" style="width:100%" onclick="onClick(this)" alt="Canoeing again">
+      <img src="https://mail.google.com/mail/u/0?ui=2&ik=5bb986801d&attid=0.1&permmsgid=msg-a:r28544503845851320&th=18a40c3ebf1167d7&view=att&disp=safe&realattid=18a40c3dd665e2464761" style="width:100%" onclick="onClick(this)" alt="A girl, and a train passing">
+      <img src="https://mail.google.com/mail/u/0?ui=2&ik=5bb986801d&attid=0.1&permmsgid=msg-a:r3943299610891913342&th=18a40c65ebaf3035&view=att&disp=safe&realattid=18a40c6519adc930141" style="width:100%" onclick="onClick(this)" alt="What a beautiful day!">
+      <img src="https://mail.google.com/mail/u/0?ui=2&ik=5bb986801d&attid=0.1&permmsgid=msg-a:r-3449140033261034806&th=18a40d8f97bb842e&view=att&disp=safe&realattid=18a40d8eb157075853c1" style="width:100%" onclick="onClick(this)" alt="What a beautiful day!">
+      <p></p>
+        </div>
+  </div>
+
+  
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- About section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+    <h4><b>About Me</b></h4>
+    <img src="./Snapinsta.app_322800086_491559516459388_8048436434344236749_n_1080.jpg" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
+    <div class="w3-content w3-justify" style="max-width:600px">
+      <h4>Who AM I?</h4>
+      <p>MY Self Akhil Babu.I am a First YEAR B-Tech (computer science) student at Amal Jyothi Engineering Collage.This is my first Profilo..I am a great interest in cooding, Web Development,Promt Engineering.I have inhand experience on Python,C,html,css,javascript,j-query,Bootstrap and many more..Hope You Liked my Web Page...</p>
+      <p>mail: akhilb732@gmail.com</p>
+      <p>ph-7012374954</p>
+      <hr class="w3-opacity">
+      <h4 class="w3-padding-16">Technical Skills</h4>
+      <p class="w3-wide">Photography</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:45%">45%</div>
+      </div>
+      <p class="w3-wide">Web Design</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:85%">85%</div>
+      </div>
+      <p class="w3-wide">Photoshop</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:80%">80%</div>
+        
+      </div>
+      <p class="w3-wide">Promt Engineering</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:75%">75%</div>
+        </div>
+      
+      <hr class="w3-opacity">
+
+        
+        
+            
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact section -->
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+    <div class="w3-content" style="max-width:600px">
+      <h4 class="w3-center"><b>Contact Me</b></h4>
+      <p>Do you want any work from me..Feel free to contact....</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-section">
+          <label>Name</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input w3-border" type="text" name="Email" required>
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <input class="w3-input w3-border" type="text" name="Message" required>
+        </div>
+        <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey">  
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>INFO</h3>
+       
+      </div>
+    <div class="col-12">
+      <div class="w3-third ">
+        <h3 class="amal">SOCIAL MEDIA PLATFORM</h3>
+        <a href="https://www.instagram.com/?hl=en"><img src= "https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/instagram_icon-instagram_buttoninstegram-1024.png" style="height: 2em;" alt="" srcset=""></a>
+      </div>
+      </div>
+
+      <div class="w3-third">
+        
+      </div>
+    </div>
+  </footer>
+  
+  <div class="w3-black w3-center w3-padding-24">Developed by Akhil <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity"></a></div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+
+</body>
+</html>
